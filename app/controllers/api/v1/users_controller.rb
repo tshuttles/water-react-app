@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Api::V1::UsersController < ApplicationController
   
   def new 
     @user = User.new 
@@ -23,5 +23,5 @@ class UsersController < ApplicationController
   def user_params 
     params.require(:user).permit(:name, :password)
   end 
-  
+
 end

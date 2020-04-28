@@ -3,7 +3,7 @@ class Api::V1::WatersController < ApplicationController
 
   def index 
     waters = Water.all 
-    render json: waters
+    render json: WaterSerializer.new(waters).to_serialized_json
   end 
 
   def create 
@@ -27,8 +27,6 @@ class Api::V1::WatersController < ApplicationController
     water = Water.find(params[:id])
     water.delete
   end
-
-  # add serializer if need be later?? 
 
   private 
 

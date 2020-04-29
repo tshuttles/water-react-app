@@ -6,4 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# w1 = Water.create([{ amount: 10}])
+u1 = User.create([{ username: "john", password: "john", name: "john"}])
+u2 = User.create([{ username: "david", password: "david", name: "david"}])
+u3 = User.create([{ username: "pete", password: "pete", name: "pete"}])
+
+w1 = Water.create([{ amount: 10, user_id: 1}])
+w2 = Water.create([{ amount: 15, user_id: 2}])
+w3 = Water.create([{ amount: 5, user_id: 3}])

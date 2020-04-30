@@ -1,4 +1,5 @@
 import React from 'react';
+import { Login } from './components/login.js'
 import './App.css';
 
 export default class App extends React.Component {
@@ -8,6 +9,7 @@ export default class App extends React.Component {
         <header className="App-header">
           <h1>Water</h1>
         </header>
+        <Login />
       </div>
     )
   }

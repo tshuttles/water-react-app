@@ -1,6 +1,6 @@
 import React from 'react';
-import { Login } from './components/login.js'
-import './App.css';
+import Login from './components/Login.js'
+// import './App.css';
 
 export default class App extends React.Component {
   render() {

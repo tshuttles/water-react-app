@@ -1,40 +1,41 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { updateLoginForm } from '../actions/loginForm.js';
+import { login } from '../actions/currentUser.js';
 
-const Login = ({ username, password, name, updateLoginForm }) => {
+const Login = ({ loginForm, updateLoginForm, login }) => {
   const handleOnChange = e => {
     const { name, value } = e.target
     const updatedFormInfo = {
-      name,
-      value
+      ...loginForm,
+      [name]: value
     }
-    
     updateLoginForm(updatedFormInfo)
   }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    login(loginForm)
+  }
+
   return (
-    <form onSubmit={undefined}>
-      <input placeholder="username" type="text" value={username} name="username" onChange={handleOnChange} />
-      <input placeholder="password" type="text" value={password} name="password" onChange={handleOnChange} />
-      <input placeholder="name" type="text" value={name} name="name" onChange={handleOnChange} />
+    <form onSubmit={handleSubmit}>
+      <input placeholder="username" type="text" value={loginForm.username} name="username" onChange={handleOnChange} />
+      <input placeholder="password" type="text" value={loginForm.password} name="password" onChange={handleOnChange} />
+      <input placeholder="name" type="text" value={loginForm.name} name="name" onChange={handleOnChange} />
       <input type="submit" value="Log In" />
     </form>
   )
 }
 
-// this gives me an argument coming to this component that looks like this:
-// {
-//   username: "jsmith"
-//   password: "smith1"
-//   name: "John"
-// }
 const mapStateToProps = state => {
   return {
-    username: state.loginForm.username, 
-    password: state.loginForm.password,
-    name: state.loginForm.name
+    // username: state.loginForm.username, 
+    // password: state.loginForm.password,
+    // name: state.loginForm.name
+    loginForm: state.loginForm
   }
 }
 
-export default connect(mapStateToProps, { updateLoginForm })(Login)
+export default connect(mapStateToProps, { updateLoginForm, login })(Login)
 // ^^ "updateLoginForm: updateLoginForm" longhand = updateLoginForm

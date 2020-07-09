@@ -4,7 +4,5 @@ class User < ApplicationRecord
 
   validates :username, uniqueness: true
   validates :username, presence: true
-  validates :password, presence: true 
-  validates :name, uniqueness: true
-  validates :name, presence: true
+  validates :password, presence: true
 end

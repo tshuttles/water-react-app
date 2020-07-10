@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import Water from '../components/Water.js'
+import Waters from '../components/Waters.js';
+import { connect } from 'react-redux'; 
 
-export default class WatersContainer extends Component {
+class WatersContainer extends Component {
+
   render() {
     return (
       <div>
         <ul>
-          <Water />
+          <Waters waters={this.props.waters} />
         </ul>
       </div>
     )

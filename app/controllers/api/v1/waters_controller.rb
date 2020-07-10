@@ -15,13 +15,13 @@ class Api::V1::WatersController < ApplicationController
     end 
   end 
 
-  def edit
-  end
+  # def edit
+  # end
 
-  def update 
-    water.update(water_params)
-    render json: waters
-  end 
+  # def update 
+  #   water.update(water_params)
+  #   render json: waters
+  # end 
 
   def destroy
     water = Water.find(params[:id])

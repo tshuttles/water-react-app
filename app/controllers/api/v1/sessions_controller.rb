@@ -11,9 +11,9 @@ class Api::V1::SessionsController < ApplicationController
       render json: @user
     else 
       # flash[:error] = "Incorrect login attempt. Please try again."
-      render json: (
+      render json: {
         error: "Invalid credentials"
-      )
+      }
     end 
   end 
 

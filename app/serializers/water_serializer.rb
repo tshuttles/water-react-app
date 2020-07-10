@@ -1,4 +1,4 @@
-class Serializer 
+class WaterSerializer 
 
   def initialize(water_object)
     @water = water_object 

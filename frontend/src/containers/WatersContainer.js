@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Waters from '../components/Waters.js';
+import Waters from '../components/waters/Waters.js';
 import { connect } from 'react-redux'; 
 
 class WatersContainer extends Component {

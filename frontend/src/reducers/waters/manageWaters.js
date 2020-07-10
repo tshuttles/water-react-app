@@ -11,5 +11,10 @@ export default function manageWaters(state = {
         ...state,
         waters: [ ...state.waters, water]
       }
+    case 'GET_WATERS':
+      return { waters: action.payload }
+
+    default:
+      return state 
   }
 }

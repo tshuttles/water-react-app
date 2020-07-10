@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Waters from '../components/waters/Waters.js';
-import { connect } from 'react-redux'; 
 import WaterInput from '../components/waters/WaterInput.js';
+import { connect } from 'react-redux'; 
 
 class WatersContainer extends Component {
   render() {

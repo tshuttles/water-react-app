@@ -1,9 +1,17 @@
 import React from 'react';
+// import './App.css';
 import Login from './components/users/Login.js';
 import WatersContainer from './containers/WatersContainer.js';
-// import './App.css';
+import { connect } from 'react-redux';
+import { getCurrentUser } from './actions/users/currentUser.js';
 
-export default class App extends React.Component {
+
+class App extends React.Component {
+
+  componentDidMount() {
+    this.props.getCurrentUser()
+  }
+
   render() {
     return (
       <div className="App">
@@ -16,3 +24,5 @@ export default class App extends React.Component {
     )
   }
 }
+
+export default connect(null, {getCurrentUser})(App);

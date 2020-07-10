@@ -1,5 +1,6 @@
 import React from 'react';
-import Login from './components/Login.js'
+import Login from './components/users/Login.js';
+import WatersContainer from './containers/WatersContainer.js';
 // import './App.css';
 
 export default class App extends React.Component {
@@ -10,6 +11,7 @@ export default class App extends React.Component {
           <h1>Water</h1>
         </header>
         <Login />
+        <WatersContainer />
       </div>
     )
   }

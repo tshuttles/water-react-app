@@ -14,3 +14,10 @@ class WatersContainer extends Component {
     )
   }
 }
+const mapStateToProps = state => ({ waters: state.waters })
+
+const mapDispatchToProps = dispatch => ({
+  addWater: amount => dispatch({ type: 'ADD_WATER', amount })
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(WatersContainer)

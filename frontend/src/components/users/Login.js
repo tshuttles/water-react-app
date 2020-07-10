@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateLoginForm } from '../../actions/loginForm.js';
-import { login } from '../../actions/currentUser.js';
+import { updateLoginForm } from '../../actions/users/loginForm.js';
+import { login } from '../../actions/users/currentUser.js';
 
 const Login = ({ loginForm, updateLoginForm, login }) => {
   const handleOnChange = e => {

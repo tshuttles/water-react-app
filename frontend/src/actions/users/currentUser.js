@@ -6,7 +6,12 @@ export const setCurrentUser = user => {
   }
 }
 
-// asynchronous action creator
+export const clearCurrentUser = () => {
+  return {
+    type: "CLEAR_CURRENT_USER"
+  }
+}
+// asynchronous action creators
 export const login = (credentials) => {
   return dispatch => {
     return fetch("http://localhost:3001/api/v1/login", {
@@ -25,6 +30,16 @@ export const login = (credentials) => {
           dispatch(setCurrentUser(user))
         }
       })
+  }
+}
+
+export const logout = () => {
+  return dispatch => {
+    dispatch(clearCurrentUser)
+    return fetch("http://localhost:3001/api/v1/logout", {
+      credentials: "include",
+      method: "DELETE"
+    })
   }
 }
 

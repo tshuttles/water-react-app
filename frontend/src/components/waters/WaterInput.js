@@ -17,18 +17,19 @@ export default class WaterInput extends Component {
   handleSubmit = e => {
     e.preventDefault()
     this.props.addWater(this.state.amount)
-    this.setState({amount: 0})
+    // this.setState({amount: 0})
   }
 
   render() {
     return (
       <div>
+        <h4>How Much Water You Have Consumed?</h4>
         <form onSubmit={this.handleSubmit}>
           <label Add Amount of Water/>
-          <input 
+          <input
             type="number" 
             value={this.state.amount} 
-            onChange={this.handleChange} />
+            onChange={this.handleOnChange} />
           <input type="submit" />
         </form>
       </div>

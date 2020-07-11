@@ -30,8 +30,7 @@ const Login = ({ loginForm, updateLoginForm, login }) => {
 const mapStateToProps = state => {
   return {
     // username: state.loginForm.username, 
-    // password: state.loginForm.password,
-    // name: state.loginForm.name
+    // password: state.loginForm.password
     loginForm: state.loginForm
   }
 }

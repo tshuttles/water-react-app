@@ -25,11 +25,12 @@ export default class WaterInput extends Component {
       <div>
         <h4>How Much Water You Have Consumed?</h4>
         <form onSubmit={this.handleSubmit}>
-          <label Add Amount of Water/>
+          <label>Add Amount of Water</label>
           <input
             type="number" 
             value={this.state.amount} 
             onChange={this.handleOnChange} />
+            <span>oz</span>
           <input type="submit" />
         </form>
       </div>

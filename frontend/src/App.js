@@ -1,11 +1,10 @@
 import React from 'react';
-// import './App.css';
-import Login from './components/users/Login.js';
-import Logout from './components/users/Logout.js';
-import WatersContainer from './containers/WatersContainer.js';
+import './App.css';
 import { connect } from 'react-redux';
 import { getCurrentUser } from './actions/users/currentUser.js';
 
+import WatersContainer from './containers/WatersContainer.js';
+import NavBar from './components/users/NavBar.js';
 
 class App extends React.Component {
 
@@ -20,8 +19,10 @@ class App extends React.Component {
           // <h1>Water Tracker</h1>
       //   </header>
       // </div>
-      this.props.currentUser ? <Logout /> : <Login />
-      // <WatersContainer />
+      <div>
+        <NavBar />
+        <WatersContainer />
+      </div>
     )
   }
 }

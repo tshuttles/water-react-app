@@ -7,16 +7,18 @@ class Api::V1::UsersController < ApplicationController
   end 
 
   def show 
-    user_json = UserSerializer.new(@user).serialized_json
-    render json: user_json
+    # user_json = UserSerializer.new(@user).serialized_json
+    # render json: @user, include: {:waters => {:only => [:amount, :user_id]}, :except => [:password, :updated_at]}
+    render json: @user, include: [:waters], :except => [:password_digest, :updated_at]
+    # render json: sighting(:include => {:bird => {:only => [:name, :species]}, :except => [:updated_at])
   end 
 
   def create 
     @user = User.new(user_params)
     if @user.save 
-      render json: @user, status: :created, location: @user
+      render json: @user
     else 
-      render json: @user.errors, status: :unprocessable_entity
+      render json: @user.errors
     end 
   end 
 

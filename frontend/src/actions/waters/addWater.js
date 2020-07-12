@@ -1,6 +1,7 @@
 export const addWater = (data) => {
   return (dispatch) => {
-    fetch('http://localhost:3000/api/v1/waters', {
+    fetch('http://localhost:3001/api/v1/waters', {
+      credentials: "include",
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'

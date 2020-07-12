@@ -1,4 +1,5 @@
 import { resetLoginForm } from './loginForm.js';
+import { getWaters } from '../waters/getWaters.js';
 
 // synchronous action creator 
 export const setCurrentUser = user => {
@@ -61,6 +62,7 @@ export const getCurrentUser = () => {
           alert(response.error)
         } else {
           dispatch(setCurrentUser(response.data))
+          dispatch(getWaters())
         }
       })
   }

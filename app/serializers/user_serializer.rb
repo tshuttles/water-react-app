@@ -1,4 +1,6 @@
 class UserSerializer 
   include FastJsonapi::ObjectSerializer
-  attributes :username, :created_at
+  attributes :username
+  # has_many :waters 
+  # has_many :waters, serializer: WatersSerializer
 end 

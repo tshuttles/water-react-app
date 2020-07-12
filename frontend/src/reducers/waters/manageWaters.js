@@ -1,13 +1,9 @@
-import cuid from 'cuid';
-export const cuidFn = cuid;
-
 export default function manageWaters(state = 
   []
 , action) {
   switch (action.type) {
     case 'ADD_WATER':
-      const water = { amount: action.amount, id: cuidFn() };
-      return [...state, water]
+      return [...state, action.payload]
       // return {
       //   ...state,
       //   waters: [ ...state.waters, water]
@@ -15,7 +11,6 @@ export default function manageWaters(state =
     case 'GET_WATERS':
       return [...action.payload]
       // return { waters: action.payload }
-
     default:
       return state 
   }

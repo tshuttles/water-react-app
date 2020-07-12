@@ -21,7 +21,7 @@ class App extends React.Component {
       // </div>
       <div className="App">
         <h1>Water Tracker</h1>
-        <NavBar />
+        <NavBar currentUser={this.props.currentUser}/>
         <WatersContainer />
       </div>
     )

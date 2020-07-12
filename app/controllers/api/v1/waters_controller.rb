@@ -11,9 +11,9 @@ class Api::V1::WatersController < ApplicationController
   end 
 
   def create 
-    water = Water.new(water_params)
-    if water.save 
-      render json: waters
+    @water = current_user.waters.build(water_params)
+    if @water.save 
+      render json: @water
     else 
       render json: {error: "Error! Could not input water amount."}
     end 

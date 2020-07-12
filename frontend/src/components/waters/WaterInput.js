@@ -30,7 +30,6 @@ export default class WaterInput extends Component {
             type="number" 
             value={this.state.amount} 
             onChange={this.handleOnChange} />
-            <span>oz</span>
           <input type="submit" />
         </form>
       </div>

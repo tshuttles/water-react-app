@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   delete "/api/v1/logout", to: "api/v1/sessions#destroy"
   get "/api/v1/get_current_user", to: "api/v1/sessions#get_current_user"
   get "api_v1_user_waters_path", to: "api/v1/waters#index"
+  post "api_v1_user_waters_path", to: "api/v1/waters#create"
 
   namespace :api do
     namespace :v1 do 

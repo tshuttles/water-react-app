@@ -14,10 +14,8 @@ class WatersContainer extends Component {
   render() {
     return (
       <div className="WatersContainer">
-        <ul>
           <WaterInput addWater={this.props.addWater}/>
           <Waters waters={this.props.waters} />
-        </ul>
       </div>
     )
   }

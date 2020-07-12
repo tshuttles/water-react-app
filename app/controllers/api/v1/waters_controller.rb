@@ -2,8 +2,12 @@ class Api::V1::WatersController < ApplicationController
   before_action :find_water, only: [:edit, :update]
 
   def index 
-    waters = Water.all 
-    render json: WaterSerializer.new(waters).to_serialized_json
+    if logged_in?
+      @waters = current_user.waters 
+      render json: @waters 
+    else 
+      render json: {error: "You must be logged in to see your water log"}
+    end
   end 
 
   def create 

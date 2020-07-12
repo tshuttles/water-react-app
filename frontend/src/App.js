@@ -19,7 +19,8 @@ class App extends React.Component {
           // <h1>Water Tracker</h1>
       //   </header>
       // </div>
-      <div>
+      <div className="App">
+        <h1>Water Tracker</h1>
         <NavBar />
         <WatersContainer />
       </div>
@@ -33,4 +34,4 @@ const mapStateToProps = ({ currentUser }) => {
   }
 }
 
-export default connect(mapStateToProps, {getCurrentUser})(App);
+export default connect(mapStateToProps, { getCurrentUser })(App);

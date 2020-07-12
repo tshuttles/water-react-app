@@ -1,3 +1,5 @@
+import { resetLoginForm } from './loginForm.js';
+
 // synchronous action creator 
 export const setCurrentUser = user => {
   return {
@@ -28,6 +30,7 @@ export const login = (credentials) => {
           alert(user.error)
         } else {
           dispatch(setCurrentUser(user))
+          dispatch(resetLoginForm())
         }
       })
   }
@@ -35,7 +38,7 @@ export const login = (credentials) => {
 
 export const logout = () => {
   return dispatch => {
-    dispatch(clearCurrentUser)
+    dispatch(clearCurrentUser())
     return fetch("http://localhost:3001/api/v1/logout", {
       credentials: "include",
       method: "DELETE"
@@ -53,11 +56,11 @@ export const getCurrentUser = () => {
       }
     })
       .then(response => response.json())
-      .then(user => {
-        if (user.error) {
-          alert(user.error)
+      .then(response => {
+        if (response.error) {
+          alert(response.error)
         } else {
-          dispatch(setCurrentUser(user))
+          dispatch(setCurrentUser(response.data))
         }
       })
   }

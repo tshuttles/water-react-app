@@ -1,6 +1,6 @@
-/* .App {
-  text-align: center;
-} */
+.App {
+  text-align: left;
+}
 
 /* .App-logo {
   height: 40vmin;
@@ -36,6 +36,9 @@
     transform: rotate(360deg);
   }
 } */
+.h1 {
+  color: blue
+}
 .NavBar {
   font: "something"
 }

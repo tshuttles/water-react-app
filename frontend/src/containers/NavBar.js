@@ -1,7 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import Login from './Login.js';
-import Logout from './Logout.js';
+import Login from '../components/users/Login.js';
+import Logout from '../components/users/Logout.js';
 
 const NavBar = ({ currentUser }) => {
   return (
@@ -15,11 +14,12 @@ const NavBar = ({ currentUser }) => {
             <ul
               class="text-gray-400 sm:self-center text-xl border-t-2 sm:border-none"
             >
+            // if statement here
               <li class="sm:inline-block">
-                <a href="#" class="p-3 hover:text-white">Home</a>
+                <a href="#" class="p-3 hover:text-white">Login</a>
               </li>
               <li class="sm:inline-block">
-                <a href="#" class="p-3 hover:text-white">About</a>
+                <a href="#" class="p-3 hover:text-white">Logout</a>
               </li>
             </ul>
           </div>
@@ -28,11 +28,4 @@ const NavBar = ({ currentUser }) => {
     </div>
   )
 }
-
-const mapStateToProps = ({currentUser}) => {
-  return {
-    currentUser
-  }
-}
-
-export default connect(mapStateToProps)(NavBar)
+export default NavBar

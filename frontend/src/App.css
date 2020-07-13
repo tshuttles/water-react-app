@@ -15,13 +15,13 @@
   top: 0
 }
 
-/* .Footer {
-  background-color: #F8F8F8,
-  textAlign: center,
-  padding: 20px,
-  position: fixed,
-  left: 0,
-  bottom: 0,
-  height: 60px,
-  width: 100%
-} */
+.Footer {
+  /* background-color: #F8F8F8; */
+  text-align: right;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+}

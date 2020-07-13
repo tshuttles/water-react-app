@@ -1,23 +1,17 @@
 import React from 'react';
 import './App.css';
-import { connect } from 'react-redux';
-import { getCurrentUser } from './actions/users/currentUser.js';
 import WatersContainer from './containers/WatersContainer.js';
-import NavBar from './components/users/NavBar.js';
+import UsersContainer from './containers/UsersContainer.js';
 import { Footer } from './components/Footer.js';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Login from './components/users/Login.js';
+import Logout from './components/users/Logout.js';
 
-class App extends React.Component {
-
-  componentDidMount() {
-    this.props.getCurrentUser()
-  }
-
+export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        { this.props.currentUser ? <h2>Welcome, { this.props.currentUser.attributes.username }</h2> : ""}
-        <NavBar currentUser={this.props.currentUser}/>
+        <UsersContainer />
         <WatersContainer />
         <Footer />
         <Router >
@@ -29,11 +23,3 @@ class App extends React.Component {
     )
   }
 }
-
-const mapStateToProps = ({ currentUser }) => {
-  return {
-    currentUser
-  }
-}
-
-export default connect(mapStateToProps, { getCurrentUser })(App);

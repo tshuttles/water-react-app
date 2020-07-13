@@ -10,8 +10,8 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  <Router>
+  // <Router>
 
-  </Router>,
+  // </Router>,
   document.getElementById('root')
 );

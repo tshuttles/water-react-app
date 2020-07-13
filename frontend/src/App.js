@@ -5,6 +5,7 @@ import { getCurrentUser } from './actions/users/currentUser.js';
 
 import WatersContainer from './containers/WatersContainer.js';
 import NavBar from './components/users/NavBar.js';
+import { Footer } from './components/Footer.js';
 
 class App extends React.Component {
 
@@ -14,15 +15,11 @@ class App extends React.Component {
 
   render() {
     return (
-      // <div className="App">
-      //   <header className="App-header">
-          // <h1>Water Tracker</h1>
-      //   </header>
-      // </div>
       <div className="App">
-        <h1>Water Tracker</h1>
+        { this.props.currentUser ? <h2>Welcome, { this.props.currentUser.attributes.username }</h2> : ""}
         <NavBar currentUser={this.props.currentUser}/>
         <WatersContainer />
+        <Footer />
       </div>
     )
   }

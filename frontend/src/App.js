@@ -2,10 +2,11 @@ import React from 'react';
 import './App.css';
 import WatersContainer from './containers/WatersContainer.js';
 import UsersContainer from './containers/UsersContainer.js';
+import NavBar from './containers/NavBar.js';
 import { Footer } from './components/Footer.js';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Login from './components/users/Login.js';
-import Logout from './components/users/Logout.js';
+// import Logout from './components/users/Logout.js';
 
 export default class App extends React.Component {
   render() {
@@ -14,11 +15,10 @@ export default class App extends React.Component {
         <UsersContainer />
         <WatersContainer />
         <Footer />
-        <Router >
+        <NavBar />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/logout" component={Logout} />
-          <Route exact path="/WatersContainer" component={WatersContainer} />
-        </Router>
+          {/* <Route exact path="/logout" component={Logout} /> */}
+          <Route exact path="/waters" component={WatersContainer} />
       </div>
     )
   }

@@ -1,4 +1,5 @@
 import { resetLoginForm } from './loginForm.js';
+import { resetSignupForm } from './signupForm.js';
 import { getWaters } from '../waters/getWaters.js';
 
 // synchronous action creator 
@@ -15,6 +16,28 @@ export const clearCurrentUser = () => {
   }
 }
 // asynchronous action creators
+export const signup = (credentials) => {
+  return dispatch => {
+    return fetch("http://localhost:3001/api/v1/signup", {
+      credentials: "include",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(credentials)
+    })
+      .then(response => response.json())
+      .then(user => {
+        if (user.error) {
+          alert(user.error)
+        } else {
+          dispatch(setCurrentUser(user.data.attributes))
+          dispatch(resetSignupForm())
+        }
+      })
+  }
+}
+
 export const login = (credentials) => {
   return dispatch => {
     return fetch("http://localhost:3001/api/v1/login", {
@@ -30,7 +53,7 @@ export const login = (credentials) => {
         if (user.error) {
           alert(user.error)
         } else {
-          dispatch(setCurrentUser(user))
+          dispatch(setCurrentUser(user.data.attributes))
           dispatch(resetLoginForm())
         }
       })
@@ -57,11 +80,11 @@ export const getCurrentUser = () => {
       }
     })
       .then(response => response.json())
-      .then(response => {
-        if (response.error) {
-          alert(response.error)
+      .then(user => {
+        if (user.error) {
+          alert(user.error)
         } else {
-          dispatch(setCurrentUser(response.data))
+          dispatch(setCurrentUser(user.data.attributes))
           dispatch(getWaters())
         }
       })

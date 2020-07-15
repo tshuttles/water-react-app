@@ -4,7 +4,7 @@ import Water from './Water';
 export default class Waters extends Component {
   render() {
     const { waters } = this.props
-    const waterList = waters && waters.map(water => {
+    const dailywater = waters && waters.map(water => {
       return (
         <Water key={water.id} water={water} />
       )
@@ -12,7 +12,7 @@ export default class Waters extends Component {
 
     return(
       <ul>
-        {waterList}
+        {dailywater}
       </ul>
     )
   }

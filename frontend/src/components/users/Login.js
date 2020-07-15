@@ -4,8 +4,8 @@ import { updateLoginForm } from '../../actions/users/loginForm.js';
 import { login } from '../../actions/users/currentUser.js';
 
 const Login = ({ loginForm, updateLoginForm, login }) => {
-  const handleOnChange = e => {
-    const { name, value } = e.target
+  const handleOnChange = event => {
+    const { name, value } = event.target
     const updatedFormInfo = {
       ...loginForm,
       [name]: value
@@ -13,8 +13,8 @@ const Login = ({ loginForm, updateLoginForm, login }) => {
     updateLoginForm(updatedFormInfo)
   }
 
-  const handleSubmit = e => {
-    e.preventDefault()
+  const handleSubmit = event => {
+    event.preventDefault()
     login(loginForm)
   }
 

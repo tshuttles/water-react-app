@@ -4,8 +4,8 @@ import { updateSignupForm } from '../../actions/users/signupForm.js';
 import { signup } from '../../actions/users/currentUser.js';
 
 const Signup = ({ signupForm, updateSignupForm, signup }) => {
-  const handleOnChange = e => {
-    const { name, value } = e.target
+  const handleOnChange = event => {
+    const { name, value } = event.target
     const updatedFormInfo = {
       ...signupForm,
       [name]: value
@@ -13,8 +13,8 @@ const Signup = ({ signupForm, updateSignupForm, signup }) => {
     updateSignupForm(updatedFormInfo)
   }
 
-  const handleSubmit = e => {
-    e.preventDefault()
+  const handleSubmit = event => {
+    event.preventDefault()
     signup(signupForm)
   }
 

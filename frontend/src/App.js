@@ -6,6 +6,7 @@ import NavBar from './containers/NavBar.js';
 import { Footer } from './components/Footer.js';
 import { Route, Switch } from 'react-router-dom';
 import Signup from './components/users/Signup.js';
+import DailyWater from './components/waters/DailyWater.js';
 
 export default class App extends React.Component {
   render() {
@@ -15,6 +16,7 @@ export default class App extends React.Component {
          <Switch>
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/waters" component={WatersContainer} />
+          <Route exact path="/dailywater" component={DailyWater}/>
           <Route exact path="/" component={UsersContainer} />
          </Switch>
         <Footer />

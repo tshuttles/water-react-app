@@ -4,9 +4,10 @@ export default class Water extends Component {
   render() {
     const { water } = this.props;
     return (
-      <div>
+      <div className="water-entry">
         <li>
-          {water.amount} fl oz {water.created_at}
+          Amount: {water.amount} fl oz<br/>
+          Time of Entry: {water.created_at}
         </li>
       </div>
     );

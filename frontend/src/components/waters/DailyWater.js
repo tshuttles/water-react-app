@@ -1,22 +1,22 @@
-// be child of waters container 
-// filter out waters with today's date (do logic in waterscontainer)
-// return x oz of water today (do logic in waterscontainer)
-// pass down the return of that function down to this file
-
 import React, { Component } from 'react';
-import { dailywater } from '../containers/WatersContainer.js';
+import Water from './Water.js';
+import moment from 'moment';
 
 export default class DailyWater extends Component {
   render() {
     const { waters } = this.props
-    const dailywater = waters && waters.map(water => {
+    let today = moment().dayOfYear()
+    let todayWater = waters.filter(water => water.date === today.toString())
+    const waterFilter = todayWater.map(water => {
       return (
-        <Water key={water.id} water={water} />
+        <Water key={water.id} water={water} date={water.created_at} />
       )
     })
+
     return(
       <div className="dailywater">
-        { dailywater }
+        <h2>Today's Water</h2>
+        { waterFilter }
       </div>
     )
   }

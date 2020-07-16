@@ -23,9 +23,9 @@ export default class WaterInput extends Component {
   render() {
     return (
       <div>
-        <h4>How Much Water You Have Consumed?</h4>
+        <div className="WaterInputLabel">How Much Water You Have Consumed?</div>
         <form onSubmit={this.handleSubmit}>
-          <label>Add Amount of Water</label>
+          <div className="WaterInputForm">Add Amount of Water</div>
           <input
             type="number" 
             value={this.state.amount} 

@@ -13,7 +13,7 @@ export default class App extends React.Component {
       <div className="App">
         <NavBar />
          <Switch>
-         <Route exact path="/signup" component={Signup} />
+          <Route exact path="/signup" component={Signup} />
           <Route exact path="/waters" component={WatersContainer} />
           <Route exact path="/" component={UsersContainer} />
          </Switch>

@@ -1,5 +1,5 @@
 class Api::V1::WatersController < ApplicationController
-  before_action :find_water, only: [:edit, :update]
+  # before_action :find_water, only: [:edit, :update]
 
   def index 
     if logged_in?
@@ -12,7 +12,9 @@ class Api::V1::WatersController < ApplicationController
 
   def create 
     @water = current_user.waters.build(water_params)
-    if @water.save 
+    if @water.save
+      @water.date = @water.created_at.strftime("%j")
+      @water.save
       render json: @water
     else 
       render json: {error: "Error! Could not input water amount."}
@@ -41,5 +43,10 @@ class Api::V1::WatersController < ApplicationController
   def find_water 
     water = Water.find_by(id: params[:id])
   end 
+
+  # def date 
+  #   self.created_at.strftime("%j")
+  #   self.save
+  # end 
 
 end

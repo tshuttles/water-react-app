@@ -6,7 +6,7 @@ export default class Water extends Component {
     return (
       <div>
         <li>
-          {water.amount} fl oz
+          {water.amount} fl oz {water.created_at}
         </li>
       </div>
     );

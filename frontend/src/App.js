@@ -16,7 +16,7 @@ export default class App extends React.Component {
          <Switch>
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/waters" component={WatersContainer} />
-          <Route exact path="/dailywater" component={DailyWater}/>
+          <Route exact path="/waters/dailywater" component={DailyWater}/>
           <Route exact path="/" component={UsersContainer} />
          </Switch>
         <Footer />

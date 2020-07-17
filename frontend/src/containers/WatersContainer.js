@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Waters from '../components/waters/Waters.js';
+import DailyWater from '../components/waters/DailyWater.js';
 import WaterInput from '../components/waters/WaterInput.js';
 import { addWater } from '../actions/waters/addWater.js';
 import { getWaters } from '../actions/waters/getWaters.js';
 import { connect } from 'react-redux'; 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class WatersContainer extends Component {
 
@@ -17,7 +18,9 @@ class WatersContainer extends Component {
       <div className="WatersContainer">
           <WaterInput addWater={this.props.addWater}/>
           <Waters waters={this.props.waters} />
-          <Link to="/dailywater">Today's Water</Link>
+          <DailyWater waters={this.props.waters}/>
+          {/* <Link to="/waters/dailywater">Today's Water</Link> */}
+          <div className="push"></div> 
       </div>
     )
   }

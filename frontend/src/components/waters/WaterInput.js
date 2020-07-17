@@ -23,14 +23,14 @@ export default class WaterInput extends Component {
   render() {
     return (
       <div>
-        <div className="WaterInputLabel">How Much Water You Have Consumed?</div>
+        <div className="WaterInputLabel">How Much Water You Have Drank?</div><br/>
         <form onSubmit={this.handleSubmit}>
-          <div className="WaterInputForm">Add Amount of Water</div>
+          <div className="WaterInputForm">Add Amount of Water (in fluid ounces)</div>
           <input
-            type="number" 
+            type="number"
             value={this.state.amount} 
-            onChange={this.handleOnChange} />
-          <input type="submit" />
+            onChange={this.handleOnChange}/>
+          <input type="submit"/>
         </form>
       </div>
     )

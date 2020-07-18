@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { updateSignupForm } from '../../actions/users/signupForm.js';
 import { signup } from '../../actions/users/currentUser.js';
+// import { Redirect } from 'react-router-dom'
 
 const Signup = ({ signupForm, updateSignupForm, signup }) => {
   const handleOnChange = event => {
@@ -17,10 +18,13 @@ const Signup = ({ signupForm, updateSignupForm, signup }) => {
     event.preventDefault()
     signup(signupForm)
   }
-  
-  if (this.props.currentUser) {
-    // render redirect component which will change the route
-  }
+
+  // if (this.props.currentUser) {
+  //   render redirect component which will change the route
+  //   return (
+  //     <Redirect to="/" />
+  //   )
+  // }
 
   return (
     <div className="signup">

@@ -3,7 +3,6 @@
   color: white;
   font-weight: bold;
   text-align: center;
-  /* padding-left: 20px; */
   padding-top: 20px;
   padding-bottom: 20px;
   position: fixed;
@@ -13,49 +12,49 @@
 }
 
 .push {
-  height: 50px;
+  height: 75px;
 }
 
-.water-entry {
-  white-space: pre-wrap;
+.UsersContainer {
+  padding: 25px;
 }
-
 .signup {
   padding: 20px;
   font-size: 20px;
 }
-/* 
-.UsersContainer {
-  padding: 10px;
-  font-size: 20px;
-  display: inline;
-} */
 
 .onSubmit {
   float: right;
 }
 
 .loggedin {
-  padding-left: 20px;
-  padding-top: 15px;
   font-size: 20px;
-  /* height: 30px; */
-  /* font-size: 20px; */
 }
 
 .loggedout{
-  padding: 20px;
   font-size: 20px;
+}
+
+.WatersContainer {
+  padding: 25px;
+}
+
+.water-entry {
+  white-space: pre-wrap;
 }
 
 .WaterInputLabel {
-  font-size: 20px;
+  font-size: 18px;
 }
 
-.WaterInputForm {
+.waters {
+  /* padding: 20px; */
   font-size: 16px;
 }
 
+.dailywater {
+  padding: 0px 25px 25px 25px;
+}
 /* below is the navbar styling from codepen */
 
 * {

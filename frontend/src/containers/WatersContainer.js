@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Waters from '../components/waters/Waters.js';
-import DailyWater from '../components/waters/DailyWater.js';
+// import DailyWater from '../components/waters/DailyWater.js';
 import WaterInput from '../components/waters/WaterInput.js';
 import { addWater } from '../actions/waters/addWater.js';
 import { getWaters } from '../actions/waters/getWaters.js';
@@ -18,7 +18,8 @@ class WatersContainer extends Component {
       <div className="WatersContainer">
           <WaterInput addWater={this.props.addWater}/>
           <Waters waters={this.props.waters} />
-          {/* <DailyWater waters={this.props.waters}/> */}
+          {/* <DailyWater waters={this.props.waters}/>  */}
+          {/* possibly do a toggle display instead of a link?  */}
           <Link to={{
             pathname: "/waters/dailywater",
             state: {

@@ -7,9 +7,7 @@ import { NavLink } from 'react-router-dom';
 class NavBar extends Component {
   render() {
     // should i make logout currentuser only?
-    // if (this.props.currentUser) {
-
-    // }
+    // if (this.props.currentUser) 
     return (
       <div className="nav">
         <input type="checkbox" id="nav-check"></input>

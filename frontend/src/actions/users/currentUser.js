@@ -24,15 +24,16 @@ export const signup = (credentials) => {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(credentials)
+      body: JSON.stringify({user: credentials})
     })
       .then(response => response.json())
       .then(user => {
         if (user.error) {
           alert(user.error)
         } else {
-          dispatch(setCurrentUser(user.data.attributes))
+          dispatch(setCurrentUser(user))
           dispatch(resetSignupForm())
+          
         }
       })
   }

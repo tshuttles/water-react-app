@@ -6,12 +6,11 @@ import { NavLink } from 'react-router-dom';
 
 class NavBar extends Component {
   render() {
+    // should i make logout currentuser only?
+    // if (this.props.currentUser) {
+
+    // }
     return (
-      // <div className="NavBar">
-      //   <h1>Water Tracker</h1>
-      //   <NavLink to="/" activeClassName="active">Home</NavLink>
-      //   <NavLink to="/waters" activeClassName="active">Water Log</NavLink>
-      // </div>
       <div className="nav">
         <input type="checkbox" id="nav-check"></input>
         <div className="nav-header">

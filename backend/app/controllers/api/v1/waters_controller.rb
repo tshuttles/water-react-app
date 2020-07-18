@@ -13,7 +13,7 @@ class Api::V1::WatersController < ApplicationController
   def create 
     @water = current_user.waters.build(water_params)
     if @water.save
-      byebug
+      # byebug
       @water.date = @water.created_at.strftime("%j")
       @water.custom_created_at
       @water.save

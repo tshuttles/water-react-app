@@ -17,13 +17,21 @@ const Signup = ({ signupForm, updateSignupForm, signup }) => {
     event.preventDefault()
     signup(signupForm)
   }
+  
+  if (this.props.currentUser) {
+    // render redirect component which will change the route
+  }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="signup">
+      Register Here
+      <br/>
+      <form onSubmit={handleSubmit}>
       <input placeholder="username" type="text" value={signupForm.username} name="username" onChange={handleOnChange} />
       <input placeholder="password" type="text" value={signupForm.password} name="password" onChange={handleOnChange} />
       <input type="submit" value="Sign Up" />
     </form>
+    </div>
   )
 }
 

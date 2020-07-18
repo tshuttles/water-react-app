@@ -20,6 +20,34 @@
   white-space: pre-wrap;
 }
 
+.signup {
+  padding: 20px;
+  font-size: 20px;
+}
+/* 
+.UsersContainer {
+  padding: 10px;
+  font-size: 20px;
+  display: inline;
+} */
+
+.onSubmit {
+  float: right;
+}
+
+.loggedin {
+  padding-left: 20px;
+  padding-top: 15px;
+  font-size: 20px;
+  /* height: 30px; */
+  /* font-size: 20px; */
+}
+
+.loggedout{
+  padding: 20px;
+  font-size: 20px;
+}
+
 .WaterInputLabel {
   font-size: 20px;
 }

@@ -14,9 +14,19 @@ class UsersContainer extends Component {
     const username = this.props.currentUser && this.props.currentUser.username
     let component;
     if (this.props.currentUser) {
-      component = <div><h2>Welcome, {username}</h2> <Logout /></div>
+      component = <div className="loggedin">
+                    Welcome, {username} <Logout />
+                    <br/>
+                    <br/>
+                    Check out your Water Log at the top to make your entries!
+                  </div>
     } else {
-      component = <div><Login /> <Link to="/signup">Sign Up</Link></div>
+      component = <div className="loggedout">
+                    Log In Here
+                    <Login /><br/>
+                    or Register Now!<br/>
+                    <Link to="/signup">Sign Up</Link>
+                  </div>
     }
     return (
       <div className="UsersContainer">

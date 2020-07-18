@@ -4,7 +4,7 @@ import moment from 'moment';
 
 export default class DailyWater extends Component {
   render() {
-    const { waters } = this.props
+    const { waters } = this.props.location.state 
     let today = moment().dayOfYear()
     let todayWater = waters.filter(water => water.date === today.toString())
     const waterFilter = todayWater.map(water => {

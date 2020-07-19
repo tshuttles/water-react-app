@@ -10,12 +10,29 @@ export const addWater = (amount) => {
       body: JSON.stringify({ amount })
     })
     .then(response => response.json())
-    .then(water => dispatch({type: 'ADD_WATER', payload: water}))
+    .then(water => {
+      dispatch(waterAdd(water))
+      dispatch(resetWaterForm())
+    })
+  }
+}
+
+export const waterAdd = (water) => {
+  return {
+    type: "ADD_WATER",
+    water
   }
 }
 
 export const resetWaterForm = () => {
   return {
     type: "RESET_WATER_FORM"
+  }
+}
+
+export const updateWaterForm = (formData) => {
+  return {
+    type: "UPDATE_WATER_FORM",
+    formData
   }
 }

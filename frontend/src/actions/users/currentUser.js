@@ -1,6 +1,5 @@
 import { resetLoginForm } from './loginForm.js';
 import { resetSignupForm } from './signupForm.js';
-// import { getWaters } from '../waters/getWaters.js';
 
 // synchronous action creator 
 export const setCurrentUser = user => {
@@ -27,15 +26,15 @@ export const signup = (credentials) => {
       },
       body: JSON.stringify({user: credentials})
     })
-      .then(response => response.json())
-      .then(user => {
-        if (user.error) {
-          alert(user.error)
-        } else if (user.data) {
-          dispatch(setCurrentUser(user.data.attributes))
-          dispatch(resetSignupForm())
-        }
-      })
+    .then(response => response.json())
+    .then(user => {
+      if (user.error) {
+        alert(user.error)
+      } else if (user.data) {
+        dispatch(setCurrentUser(user.data.attributes))
+        dispatch(resetSignupForm())
+      }
+    })
   }
 }
 
@@ -86,7 +85,6 @@ export const getCurrentUser = () => {
           alert(user.error)
         } else {
           dispatch(setCurrentUser(user.data.attributes))
-          // dispatch(getWaters())
         }
       })
   }

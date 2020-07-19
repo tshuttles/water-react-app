@@ -4,7 +4,7 @@ import currentUser from './reducers/users/currentUser.js';
 import loginForm from './reducers/users/loginForm.js';
 import manageWaters from './reducers/waters/manageWaters.js';
 import signupForm from './reducers/users/signupForm.js';
-import waterForm from './reducers/waters/manageWaters.js';
+import waterForm from './reducers/waters/waterForm.js';
 
 const reducer = combineReducers({
   currentUser,

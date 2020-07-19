@@ -1,39 +1,45 @@
-import React, { Component } from 'react';
+import React from 'react';
+import waterForm from '../../reducers/waters/waterForm';
+import { connect } from 'react-redux';
+import { addWater, updateWaterForm } from '../../actions/waters/addWater.js';
 
-export default class WaterInput extends Component {
-  constructor() {
-    super()
-    this.state = {
-      amount: ""
+const WaterInput = ({ updateWaterForm, addWater }) => {
+  const handleOnChange = event => {
+    // debugger 
+    const { value } = event.target
+    const updatedFormInfo = {
+      ...waterForm,
+      amount: value
     }
+    updateWaterForm(updatedFormInfo)
   }
 
-  handleOnChange = e => {
-    this.setState({
-      amount: e.target.value
-    })
-  }
-
-  handleSubmit = e => {
-    e.preventDefault()
+  const handleSubmit = event => {
+    event.preventDefault()
     this.props.addWater(this.state.amount)
   }
 
-  render() {
-    return (
-      <div className="WaterInputLabel">
-        How Much Water You Have Drank?
-        <br/>
-        <br/>
-          <form onSubmit={this.handleSubmit}>
-            Add Amount of Water (in fluid ounces)<br/>
-            <input
-              type="number"
-              value={this.state.amount} 
-              onChange={this.handleOnChange}/>
-            <input type="submit"/>
-          </form>
-      </div>
-    )
+  return (
+    <div className="WaterInputLabel">
+      How Much Water Have You Drunk?
+      <br/>
+      <br/>
+        <form onSubmit={handleSubmit}>
+          Add Amount of Water (in fluid ounces)<br/>
+          <input
+            type="number"
+            value={waterForm.amount} 
+            onChange={handleOnChange}/>
+          <input type="submit"/>
+        </form>
+    </div>
+  )
+}
+
+const mapStateToProps = state => {
+  return {
+    waterForm: state.waterForm
   }
 }
+
+export default connect(mapStateToProps, { updateWaterForm, addWater })(WaterInput)

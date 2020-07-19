@@ -4,7 +4,7 @@ export default class WaterInput extends Component {
   constructor() {
     super()
     this.state = {
-      amount: 0
+      amount: ""
     }
   }
 

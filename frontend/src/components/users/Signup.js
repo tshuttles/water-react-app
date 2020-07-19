@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { updateSignupForm } from '../../actions/users/signupForm.js';
 import { signup } from '../../actions/users/currentUser.js';
-// import { Redirect } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 
 const Signup = ({ signupForm, updateSignupForm, signup }) => {
   const handleOnChange = event => {
@@ -14,12 +15,18 @@ const Signup = ({ signupForm, updateSignupForm, signup }) => {
     updateSignupForm(updatedFormInfo)
   }
 
+  // let history = useHistory()
   const handleSubmit = event => {
     event.preventDefault()
     signup(signupForm)
+    // history.push("/")
   }
 
-  // if (this.props.currentUser) {
+  // const componentDidMount = () => {
+  //   this.props.getCurrentUser()
+  // }
+
+  // if (componentDidMount()) {
   //   render redirect component which will change the route
   //   return (
   //     <Redirect to="/" />

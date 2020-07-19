@@ -19,6 +19,7 @@ class UsersContainer extends Component {
                     <br/>
                     <br/>
                     Check out your Water Log at the top to make your entries!
+                    <div className="cup"></div>
                   </div>
     } else {
       component = <div className="loggedout">

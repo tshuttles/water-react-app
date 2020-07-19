@@ -17,16 +17,17 @@ class WatersContainer extends Component {
     return (
       <div className="WatersContainer">
           <WaterInput addWater={this.props.addWater}/>
-          <Waters waters={this.props.waters} />
-          {/* <DailyWater waters={this.props.waters}/>  */}
-          {/* possibly do a toggle display instead of a link?  */}
-          <Link to={{
+          <br/>
+          <Link className="todayswaterlink" to={{
             pathname: "/waters/dailywater",
             state: {
               waters: this.props.waters
             }
           }}>Today's Water
           </Link>
+          <Waters waters={this.props.waters} />
+          {/* <DailyWater waters={this.props.waters}/>  */}
+          {/* possibly do a toggle display instead of a link?  */}
           <div className="push"></div> 
       </div>
     )

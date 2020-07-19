@@ -1,6 +1,6 @@
 import { resetLoginForm } from './loginForm.js';
 import { resetSignupForm } from './signupForm.js';
-import { getWaters } from '../waters/getWaters.js';
+// import { getWaters } from '../waters/getWaters.js';
 
 // synchronous action creator 
 export const setCurrentUser = user => {
@@ -15,6 +15,7 @@ export const clearCurrentUser = () => {
     type: "CLEAR_CURRENT_USER"
   }
 }
+
 // asynchronous action creators
 export const signup = (credentials) => {
   return dispatch => {
@@ -33,7 +34,6 @@ export const signup = (credentials) => {
         } else {
           dispatch(setCurrentUser(user.data.attributes))
           dispatch(resetSignupForm())
-          
         }
       })
   }
@@ -86,7 +86,7 @@ export const getCurrentUser = () => {
           alert(user.error)
         } else {
           dispatch(setCurrentUser(user.data.attributes))
-          dispatch(getWaters())
+          // dispatch(getWaters())
         }
       })
   }

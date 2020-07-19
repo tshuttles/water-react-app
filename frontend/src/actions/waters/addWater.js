@@ -13,3 +13,9 @@ export const addWater = (amount) => {
     .then(water => dispatch({type: 'ADD_WATER', payload: water}))
   }
 }
+
+export const resetWaterForm = () => {
+  return {
+    type: "RESET_WATER_FORM"
+  }
+}

@@ -31,7 +31,7 @@ export const signup = (credentials) => {
       .then(user => {
         if (user.error) {
           alert(user.error)
-        } else {
+        } else if (user.data) {
           dispatch(setCurrentUser(user.data.attributes))
           dispatch(resetSignupForm())
         }

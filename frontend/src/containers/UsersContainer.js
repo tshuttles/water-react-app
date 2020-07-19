@@ -18,7 +18,7 @@ class UsersContainer extends Component {
                     Welcome, {username} <Logout />
                     <br/>
                     <br/>
-                    Check out your Water Log at the top to make your entries!
+                    Check out your Water Log to make your entries!
                     <div className="cup"></div>
                   </div>
     } else {

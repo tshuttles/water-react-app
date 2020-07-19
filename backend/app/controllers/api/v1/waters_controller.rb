@@ -31,10 +31,10 @@ class Api::V1::WatersController < ApplicationController
   #   render json: waters
   # end 
 
-  def destroy
-    water = Water.find(params[:id])
-    water.delete
-  end
+  # def destroy
+  #   water = Water.find(params[:id])
+  #   water.delete
+  # end
 
   private 
 

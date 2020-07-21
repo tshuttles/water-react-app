@@ -7,7 +7,7 @@ export const addWater = (amount) => {
         'Accept': 'application/json'
       },
       method: 'POST',
-      body: JSON.stringify({ amount })
+      body: JSON.stringify({ water: amount })
     })
     .then(response => response.json())
     .then(water => {

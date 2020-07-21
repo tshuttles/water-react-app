@@ -14,9 +14,9 @@ class Api::V1::WatersController < ApplicationController
     @water = current_user.waters.build(water_params)
     if @water.save
       # byebug
-      @water.date = @water.created_at.strftime("%j")
-      @water.custom_created_at
-      @water.save
+      # @water.date = @water.created_at.strftime("%j")
+      # @water.custom_created_at
+      # @water.save
       render json: @water
     else 
       render json: {error: "Error! Could not input water amount."}

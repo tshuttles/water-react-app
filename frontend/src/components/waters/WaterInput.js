@@ -1,11 +1,9 @@
 import React from 'react';
-import waterForm from '../../reducers/waters/waterForm';
 import { connect } from 'react-redux';
 import { addWater, updateWaterForm } from '../../actions/waters/addWater.js';
 
-const WaterInput = ({ updateWaterForm, addWater }) => {
+const WaterInput = ({ updateWaterForm, addWater, waterForm }) => {
   const handleOnChange = event => {
-    // debugger 
     const { value } = event.target
     const updatedFormInfo = {
       ...waterForm,
@@ -16,7 +14,7 @@ const WaterInput = ({ updateWaterForm, addWater }) => {
 
   const handleSubmit = event => {
     event.preventDefault()
-    this.props.addWater(this.state.amount)
+    addWater(waterForm)
   }
 
   return (

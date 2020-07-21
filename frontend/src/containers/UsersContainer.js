@@ -23,9 +23,10 @@ class UsersContainer extends Component {
                   </div>
     } else {
       component = <div className="loggedout">
-                    Log In Here
-                    <Login /><br/>
-                    or Register Now!<br/>
+                    Log In
+                    <Login />
+                    <p><span> or </span></p>
+                    Create New Account<br/>
                     <Link to="/signup">Sign Up</Link>
                   </div>
     }

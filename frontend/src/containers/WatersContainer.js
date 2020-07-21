@@ -16,19 +16,18 @@ class WatersContainer extends Component {
   render() {
     return (
       <div className="WatersContainer">
-          <WaterInput addWater={this.props.addWater}/>
-          <br/>
-          <Link className="todayswaterlink" to={{
-            pathname: "/waters/dailywater",
-            state: {
-              waters: this.props.waters
-            }
-          }}>Today's Water
-          </Link>
-          <Waters waters={this.props.waters} />
-          {/* <DailyWater waters={this.props.waters}/>  */}
-          {/* possibly do a toggle display instead of a link?  */}
-          <div className="push"></div> 
+        <WaterInput addWater={this.props.addWater}/>
+        <br/>
+        <Link className="todayswaterLink" to={{
+          pathname: "/waters/dailywater",
+          state: {
+            waters: this.props.waters
+          }
+        }}>Today's Water
+        </Link>
+        <Waters waters={this.props.waters} />
+        {/* <DailyWater waters={this.props.waters}/>  */}
+        <div className="push"></div> 
       </div>
     )
   }

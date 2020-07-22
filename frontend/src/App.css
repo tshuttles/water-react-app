@@ -39,7 +39,7 @@ p:after {
 }
 
 .UsersContainer {
-  padding: 25px;
+  padding: 30px;
 }
 
 input[type=text] {
@@ -65,7 +65,7 @@ input[type=text]:focus {
   text-align: center;
 }
 
-.onSubmit {
+.logout {
   float: right;
 }
 
@@ -78,8 +78,17 @@ input[type=text]:focus {
   text-align: center;
 }
 
+input[type=submit] {
+  border-radius: 8px;
+  background-color: rgb(31, 152, 233);
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  padding: 10px 26px;
+}
+
 .WatersContainer {
-  padding: 25px;
+  padding: 30px;
 }
 
 .water-entry {
@@ -87,15 +96,15 @@ input[type=text]:focus {
 }
 
 .WaterInputLabel {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .waters {
   font-size: 16px;
 }
 
-.todayswaterlink {
-  font-size: 20px;
+.todayswaterLink {
+  font-size: 22px;
   color: blue; 
 }
 

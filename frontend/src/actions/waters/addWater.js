@@ -1,4 +1,4 @@
-export const addWater = (amount) => {
+export const addWater = (water) => {
   return (dispatch) => {
     fetch('http://localhost:3001/api_v1_user_waters_path', {
       credentials: "include",
@@ -7,7 +7,7 @@ export const addWater = (amount) => {
         'Accept': 'application/json'
       },
       method: 'POST',
-      body: JSON.stringify({ water: amount })
+      body: JSON.stringify({ water })
     })
     .then(response => response.json())
     .then(water => {

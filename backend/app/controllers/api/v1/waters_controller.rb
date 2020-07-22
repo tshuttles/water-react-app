@@ -13,10 +13,9 @@ class Api::V1::WatersController < ApplicationController
   def create 
     @water = current_user.waters.build(water_params)
     if @water.save
-      # byebug
-      # @water.date = @water.created_at.strftime("%j")
+      @water.date = @water.created_at.strftime("%j")
       # @water.custom_created_at
-      # @water.save
+      @water.save
       render json: @water
     else 
       render json: {error: "Error! Could not input water amount."}
@@ -50,5 +49,9 @@ class Api::V1::WatersController < ApplicationController
   #   self.created_at.strftime("%j")
   #   self.save
   # end 
+
+  # def custom_created_at
+  #   attributes['created_at'].strftime("%m/%d/%Y %I:%M %p")
+  # end
 
 end

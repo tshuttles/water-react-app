@@ -59,9 +59,35 @@ input[type=text]:focus {
   width: 40%;
 }
 
+input[type=password] {
+  border: none;
+  width: 150px;
+  box-sizing: border-box;
+  border: 2px solid rgb(31, 152, 233);
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 10px 15px 10px 10px;
+  transition: width 0.2s ease-in-out;
+}
+input[type=password]:focus {
+  width: 40%;
+}
+
+input[type=number] {
+  font-size: 14px;
+  padding: 8px;
+  /* background-color: rgb(31, 152, 233);
+  color: white; */
+  width: 15%;
+  border-color: rgb(31, 152, 233);
+}
+
 .signup {
   padding: 20px;
-  font-size: 22px;
+  font-size: 26px;
   text-align: center;
 }
 
@@ -70,7 +96,7 @@ input[type=text]:focus {
 }
 
 .loggedin {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .loggedout{

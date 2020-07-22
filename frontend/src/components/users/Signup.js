@@ -30,9 +30,10 @@ const Signup = ({ currentUser, signupForm, updateSignupForm, signup }) => {
     <div className="signup">
       Register Here
       <br/>
+      <br/>
       <form onSubmit={handleSubmit}>
         <input placeholder="username" type="text" value={signupForm.username} name="username" onChange={handleOnChange} /><br/>
-        <input placeholder="password" type="text" value={signupForm.password} name="password" onChange={handleOnChange} /><br/>
+        <input placeholder="password" type="password" value={signupForm.password} name="password" onChange={handleOnChange} /><br/>
         <input type="submit" value="Sign Up" />
       </form>
     </div>

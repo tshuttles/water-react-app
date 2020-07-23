@@ -56,7 +56,7 @@ input[type=text] {
   transition: width 0.2s ease-in-out;
 }
 input[type=text]:focus {
-  width: 40%;
+  width: 25%;
 }
 
 input[type=password] {
@@ -73,7 +73,7 @@ input[type=password] {
   transition: width 0.2s ease-in-out;
 }
 input[type=password]:focus {
-  width: 40%;
+  width: 25%;
 }
 
 input[type=number] {
@@ -105,7 +105,7 @@ input[type=number] {
 }
 
 input[type=submit] {
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: rgb(31, 152, 233);
   font-size: 16px;
   text-align: center;
@@ -137,6 +137,8 @@ input[type=submit] {
 .dailywater {
   padding: 0px 25px 25px 25px;
 }
+
+/* below is the styling for the water cup animation */
 
 .cup {
   position: absolute;
@@ -188,7 +190,8 @@ body {
   height: 50px;
   width: 100%;
   background-color: rgb(31, 152, 233);
-  position: relative;
+  position: sticky;
+  top: 0;
 }
 
 .nav > .nav-header {

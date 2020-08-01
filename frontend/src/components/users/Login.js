@@ -36,4 +36,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, { updateLoginForm, login })(Login)
-// ^^ "updateLoginForm: updateLoginForm" longhand = updateLoginForm

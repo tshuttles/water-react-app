@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { getCurrentUser } from '../actions/users/currentUser.js';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-// import '../NavBar.css';
 
 class NavBar extends Component {
   render() {

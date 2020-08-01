@@ -17,9 +17,7 @@ class Api::V1::UsersController < ApplicationController
       render json: UserSerializer.new(@user)
     else 
       # render json: @user.errors
-      payload = {
-        error: "Invalid entry"
-      }
+      payload = {error: "Invalid entry"}
       render :json => payload
     end 
   end 

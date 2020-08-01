@@ -28,4 +28,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/tshutt
 
 ## Code of Conduct
 
-Everyone interacting in the World of Wizard's project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/tshuttles/water-react-app/CODE_OF_CONDUCT.md).
+Everyone interacting in Water Tracker's project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/tshuttles/water-react-app/CODE_OF_CONDUCT.md).

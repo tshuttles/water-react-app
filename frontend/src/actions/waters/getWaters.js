@@ -7,7 +7,9 @@ export const getWaters = () => {
         "Content-Type": "application/json"
       }
     })
-    .then(resp => resp.json())
+    .then(resp => {
+      return resp.json()
+    })
     .then(waters => dispatch({
       type: 'GET_WATERS',
       payload: waters
